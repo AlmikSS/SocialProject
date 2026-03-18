@@ -77,6 +77,44 @@ const traitRecommendations = {
   ]
 };
 
+function renderQuestions() {
+  const container = document.querySelector('#questions');
+  if (!container) return;
+
+  container.innerHTML = '';
+
+  questions.forEach((question, index) => {
+    const card = document.createElement('article');
+    card.className = 'question-card';
+
+    const anxietyType = index < 6 ? 'Ситуативная тревожность' : 'Личностная тревожность';
+
+    card.innerHTML = `
+      <div class="question-card-header">
+        <span class="question-number">${index + 1}</span>
+        <div>
+          <div class="question-text">${question}</div>
+          <div class="question-meta eyebrow">${anxietyType}</div>
+        </div>
+      </div>
+      <div class="answer-group">
+        ${answerOptions
+          .map(
+            (option) => `
+              <label class="answer-option">
+                <input type="radio" name="q${index}" value="${option.value}" required />
+                <span class="answer-label">${option.label}</span>
+              </label>
+            `
+          )
+          .join('')}
+      </div>
+    `;
+
+    container.appendChild(card);
+  });
+}
+
 function renderRecommendationBlock(container, data) {
   const intro = document.createElement('p');
   intro.className = 'result-summary';
@@ -101,7 +139,6 @@ function renderRecommendationBlock(container, data) {
 function setupSurvey() {
   const form = document.querySelector('#survey-form');
   if (!form) return;
-
 
   form.addEventListener('submit', (event) => {
     event.preventDefault();
@@ -168,6 +205,7 @@ function setupReveal() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+  renderQuestions();
   setupReveal();
   setupSurvey();
 });
