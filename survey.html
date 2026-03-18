@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Опрос по тревожности</title>
+    <meta
+      name="description"
+      content="Опрос для определения преобладающего типа тревожности."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="background" aria-hidden="true">
+      <span class="orb orb-1"></span>
+      <span class="orb orb-2"></span>
+      <span class="orb orb-3"></span>
+      <span class="grid"></span>
+    </div>
+
+    <header class="site-header container">
+      <a class="brand" href="index.html">Ментальное здоровье</a>
+      <nav class="nav">
+        <a href="index.html">Главная</a>
+        <a href="#survey-form">Вопросы</a>
+      </nav>
+    </header>
+
+    <main class="container survey-layout">
+      <section class="survey-intro glass-panel reveal">
+        <p class="eyebrow">Диагностика состояния</p>
+        <h1>Опрос по преобладающему типу тревожности</h1>
+        <p>
+          Ответьте на 12 вопросов. Первые шесть относятся к ситуативной
+          тревожности, остальные — к личностной. После заполнения вы сразу
+          увидите результат и рекомендации.
+        </p>
+      </section>
+
+      <section class="survey-content reveal">
+        <form id="survey-form" class="glass-panel survey-form">
+          <div id="questions" class="question-list">
+            <article class="question-card">
+              <span class="question-number">1</span>
+              <div class="question-text">Перед важной задачей у меня все вылетает из головы, мне кажется я тупею</div>
+              <div class="question-meta eyebrow">Ситуативная тревожность</div>
+              <div class="answer-group">
+                <label class="answer-option"><input type="radio" name="q0" value="0" required /><span class="answer-label">нет, это не про меня</span></label>
+                <label class="answer-option"><input type="radio" name="q0" value="1" required /><span class="answer-label">возможно, иногда</span></label>
+                <label class="answer-option"><input type="radio" name="q0" value="2" required /><span class="answer-label">точно про меня</span></label>
+              </div>
+            </article>
+            <article class="question-card">
+              <span class="question-number">2</span>
+              <div class="question-text">Ночью перед важным днем я не могу уснуть</div>
+              <div class="question-meta eyebrow">Ситуативная тревожность</div>
+              <div class="answer-group">
+                <label class="answer-option"><input type="radio" name="q1" value="0" required /><span class="answer-label">нет, это не про меня</span></label>
+                <label class="answer-option"><input type="radio" name="q1" value="1" required /><span class="answer-label">возможно, иногда</span></label>
+                <label class="answer-option"><input type="radio" name="q1" value="2" required /><span class="answer-label">точно про меня</span></label>
+              </div>
+            </article>
+            <article class="question-card">
+              <span class="question-number">3</span>
+              <div class="question-text">У меня дико стучит сердце если меня вызывают к доске</div>
+              <div class="question-meta eyebrow">Ситуативная тревожность</div>
+              <div class="answer-group">
+                <label class="answer-option"><input type="radio" name="q2" value="0" required /><span class="answer-label">нет, это не про меня</span></label>
+                <label class="answer-option"><input type="radio" name="q2" value="1" required /><span class="answer-label">возможно, иногда</span></label>
+                <label class="answer-option"><input type="radio" name="q2" value="2" required /><span class="answer-label">точно про меня</span></label>
+              </div>
+            </article>
+            <article class="question-card">
+              <span class="question-number">4</span>
+              <div class="question-text">Я не могу вслушаться в разговор, если переживаю из-за чего-то, мысли словно в другом месте</div>
+              <div class="question-meta eyebrow">Ситуативная тревожность</div>
+              <div class="answer-group">
+                <label class="answer-option"><input type="radio" name="q3" value="0" required /><span class="answer-label">нет, это не про меня</span></label>
+                <label class="answer-option"><input type="radio" name="q3" value="1" required /><span class="answer-label">возможно, иногда</span></label>
+                <label class="answer-option"><input type="radio" name="q3" value="2" required /><span class="answer-label">точно про меня</span></label>
+              </div>
+            </article>
+            <article class="question-card">
+              <span class="question-number">5</span>
+              <div class="question-text">У меня могут дрожать руки, когда зачитывают результаты или оценки</div>
+              <div class="question-meta eyebrow">Ситуативная тревожность</div>
+              <div class="answer-group">
+                <label class="answer-option"><input type="radio" name="q4" value="0" required /><span class="answer-label">нет, это не про меня</span></label>
+                <label class="answer-option"><input type="radio" name="q4" value="1" required /><span class="answer-label">возможно, иногда</span></label>
+                <label class="answer-option"><input type="radio" name="q4" value="2" required /><span class="answer-label">точно про меня</span></label>
+              </div>
+            </article>
+            <article class="question-card">
+              <span class="question-number">6</span>
+              <div class="question-text">Часто хочется просто валить и не участвовать во всем этом</div>
+              <div class="question-meta eyebrow">Ситуативная тревожность</div>
+              <div class="answer-group">
+                <label class="answer-option"><input type="radio" name="q5" value="0" required /><span class="answer-label">нет, это не про меня</span></label>
+                <label class="answer-option"><input type="radio" name="q5" value="1" required /><span class="answer-label">возможно, иногда</span></label>
+                <label class="answer-option"><input type="radio" name="q5" value="2" required /><span class="answer-label">точно про меня</span></label>
+              </div>
+            </article>
+            <article class="question-card">
+              <span class="question-number">7</span>
+              <div class="question-text">Я часто переживаю по пустякам, которые другие даже не замечают</div>
+              <div class="question-meta eyebrow">Личностная тревожность</div>
+              <div class="answer-group">
+                <label class="answer-option"><input type="radio" name="q6" value="0" required /><span class="answer-label">нет, это не про меня</span></label>
+                <label class="answer-option"><input type="radio" name="q6" value="1" required /><span class="answer-label">возможно, иногда</span></label>
+                <label class="answer-option"><input type="radio" name="q6" value="2" required /><span class="answer-label">точно про меня</span></label>
+              </div>
+            </article>
+            <article class="question-card">
+              <span class="question-number">8</span>
+              <div class="question-text">Я постоянно прокручиваю в голове разговоры из прошлого («надо было ответить иначе»)</div>
+              <div class="question-meta eyebrow">Личностная тревожность</div>
+              <div class="answer-group">
+                <label class="answer-option"><input type="radio" name="q7" value="0" required /><span class="answer-label">нет, это не про меня</span></label>
+                <label class="answer-option"><input type="radio" name="q7" value="1" required /><span class="answer-label">возможно, иногда</span></label>
+                <label class="answer-option"><input type="radio" name="q7" value="2" required /><span class="answer-label">точно про меня</span></label>
+              </div>
+            </article>
+            <article class="question-card">
+              <span class="question-number">9</span>
+              <div class="question-text">Даже когда я просто иду куда-то, мне кажется что окружающие меня оценивают</div>
+              <div class="question-meta eyebrow">Личностная тревожность</div>
+              <div class="answer-group">
+                <label class="answer-option"><input type="radio" name="q8" value="0" required /><span class="answer-label">нет, это не про меня</span></label>
+                <label class="answer-option"><input type="radio" name="q8" value="1" required /><span class="answer-label">возможно, иногда</span></label>
+                <label class="answer-option"><input type="radio" name="q8" value="2" required /><span class="answer-label">точно про меня</span></label>
+              </div>
+            </article>
+            <article class="question-card">
+              <span class="question-number">10</span>
+              <div class="question-text">Любая критика в мой адрес выбивает меня из колеи</div>
+              <div class="question-meta eyebrow">Личностная тревожность</div>
+              <div class="answer-group">
+                <label class="answer-option"><input type="radio" name="q9" value="0" required /><span class="answer-label">нет, это не про меня</span></label>
+                <label class="answer-option"><input type="radio" name="q9" value="1" required /><span class="answer-label">возможно, иногда</span></label>
+                <label class="answer-option"><input type="radio" name="q9" value="2" required /><span class="answer-label">точно про меня</span></label>
+              </div>
+            </article>
+            <article class="question-card">
+              <span class="question-number">11</span>
+              <div class="question-text">Когда все идет слишком хорошо, я жду подвоха</div>
+              <div class="question-meta eyebrow">Личностная тревожность</div>
+              <div class="answer-group">
+                <label class="answer-option"><input type="radio" name="q10" value="0" required /><span class="answer-label">нет, это не про меня</span></label>
+                <label class="answer-option"><input type="radio" name="q10" value="1" required /><span class="answer-label">возможно, иногда</span></label>
+                <label class="answer-option"><input type="radio" name="q10" value="2" required /><span class="answer-label">точно про меня</span></label>
+              </div>
+            </article>
+            <article class="question-card">
+              <span class="question-number">12</span>
+              <div class="question-text">Перед тем как сказать что-то, я несколько раз прокручиваю все в голове</div>
+              <div class="question-meta eyebrow">Личностная тревожность</div>
+              <div class="answer-group">
+                <label class="answer-option"><input type="radio" name="q11" value="0" required /><span class="answer-label">нет, это не про меня</span></label>
+                <label class="answer-option"><input type="radio" name="q11" value="1" required /><span class="answer-label">возможно, иногда</span></label>
+                <label class="answer-option"><input type="radio" name="q11" value="2" required /><span class="answer-label">точно про меня</span></label>
+              </div>
+            </article>
+          </div>
+          <button type="submit" class="button primary large-button">
+            Показать результат
+          </button>
+        </form>
+
+        <section id="results" class="glass-panel results hidden" aria-live="polite">
+          <div class="results-header">
+            <p class="eyebrow">Результаты</p>
+            <h2>Ваш профиль тревожности</h2>
+          </div>
+          <div class="score-grid">
+            <article>
+              <span>Ситуативная тревожность</span>
+              <strong id="state-score">0</strong>
+            </article>
+            <article>
+              <span>Личностная тревожность</span>
+              <strong id="trait-score">0</strong>
+            </article>
+          </div>
+          <div id="result-summary" class="result-summary"></div>
+          <div id="recommendations" class="recommendations"></div>
+        </section>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
