@@ -102,7 +102,6 @@ function setupSurvey() {
   const form = document.querySelector('#survey-form');
   if (!form) return;
 
-
   form.addEventListener('submit', (event) => {
     event.preventDefault();
     const formData = new FormData(form);
@@ -152,6 +151,11 @@ function setupReveal() {
   const items = document.querySelectorAll('.reveal');
   if (!items.length) return;
 
+  if (typeof IntersectionObserver !== 'function') {
+    items.forEach((item) => item.classList.add('visible'));
+    return;
+  }
+
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -164,7 +168,10 @@ function setupReveal() {
     { threshold: 0.18 }
   );
 
-  items.forEach((item) => observer.observe(item));
+  items.forEach((item) => {
+    item.classList.add('visible');
+    observer.observe(item);
+  });
 }
 
 document.addEventListener('DOMContentLoaded', () => {
